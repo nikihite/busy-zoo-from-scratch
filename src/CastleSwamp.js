@@ -1,3 +1,5 @@
+import './CastleSwamp.css';
+
 export default function CastleSwamp({ swampIsOpen }) {
   return (
     <div className={swampIsOpen ? 'open' : 'closed'}>

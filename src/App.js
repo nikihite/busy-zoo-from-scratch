@@ -1,16 +1,16 @@
 import './App.css';
 import { useState } from 'react';
 import CastleSwamp from './CastleSwamp';
-import Character from './Characters';
+import CharacterList from './CharacterList';
 
 
 
 function App() {
   
   const [swampIsOpen, setSwampIsOpen] = useState(true);
-  const [characters, setCharacters] = useState(['shrek', 'donkey', 'lord farquaad', 'princess fiona', 'pinocchio', 'gingerbread man', 'fairy godmother', 'puss in boots']);
-  const [shrekSize, setShrekSize] = useState([100]);
-  const [knightSize, setKnightSize] = useState([100]);
+  const [characters, setCharacters] = useState(['shrek', 'donkey', 'lord-farquaad', 'princess-fiona', 'pinocchio', 'gingerbread-man', 'fairy-godmother', 'puss-in-boots']);
+  const [shrekSize, setShrekSize] = useState([10]);
+  const [knightSize, setKnightSize] = useState(10);
   
   function handleShrekClick() {
     characters.push('shrek');
@@ -67,22 +67,22 @@ function App() {
           <div className='shrek'>
             <img src="../shrek2.png" width={shrekSize}/>
             <div className='button'>
-              <button onClick={() => setShrekSize(shrekSize + 1)}>SHREK</button>
-              <button onClick={() => setKnightSize(knightSize - 1)}>SHREK</button>
+              <button onClick={() => setShrekSize(shrekSize + 10)}>GROW SHREK</button>
+              <button onClick={() => setShrekSize(shrekSize - 10)}>SHRINK SHREK</button>
             </div>
           </div>
           <div className='knight'>
             <img src="../knights.png" width={knightSize}/>
             <div className='button'>
-              <button onClick={() => setKnightSize(knightSize + 1)}>KNIGHT</button>
-              <button onClick={() => setShrekSize(shrekSize - 1)}>KNIGHT</button>
+              <button onClick={() => setKnightSize(knightSize + 1)}>GROW KNIGHT</button>
+              <button onClick={() => setKnightSize(knightSize - 1)}>SHRINK KNIGHT</button>
             </div>
           </div>
         </div>
         <CastleSwamp swampIsOpen={swampIsOpen} />
         <button onClick={() => setSwampIsOpen(!swampIsOpen)}>TOGGLE</button>
       </header>
-      <Character characters={characters} />
+      <CharacterList characters={characters} />
       <button onClick={handleShrekClick}>Add Shrek</button>
       <button onClick={handleDonkeyClick}>Add Donkey</button>
       <button onClick={handleLordFarquaadClick}>Add Lord Farquaad</button>
