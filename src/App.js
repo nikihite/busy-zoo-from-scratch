@@ -61,6 +61,12 @@ function App() {
   }
   console.log(shrekSize);
 
+  function handleDeleteCharacter() {
+    characters.pop();
+
+    setCharacters(characters.slice());
+  }
+
   return (
     <div className="App">
       <header className="App-header">
@@ -92,6 +98,7 @@ function App() {
       <button onClick={handleGingerbreadManClick}>Add Gingerbread Man</button>
       <button onClick={handleFairyGodmotherClick}>Add Fairy Godmother</button>
       <button onClick={handlePussInBootsClick}>Add Puss In Boots</button>
+      <button onClick={handleDeleteCharacter}>Delete Character</button>
     </div>
   );
 }
