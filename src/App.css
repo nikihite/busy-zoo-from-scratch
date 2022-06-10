@@ -1,9 +1,26 @@
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
+
 .App {
   text-align: center;
 }
 
+.fight {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+}
+
+.shrek {
+  margin: 10px;
+}
+
+.knight {
+  margin: 10px;
+}
+
 .App-header {
-  background-color: #282c34;
+  background-color: #c287486f;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
@@ -15,4 +32,26 @@
 
 .App-link {
   color: #61dafb;
+}
+
+button {
+  margin: 5px;
+  border-radius: 50px;
+  border: 1px;
+  background-color: #bde11eb0;
+  font-size: 20px;
+  font-family: 'Chicle', cursive;
+}
+
+button:hover {
+  background-color: #7d970ab0;
+}
+
+.button {
+  display: flex;
+  flex-direction: column;
+}
+
+.swamp {
+  font-size: 30px;
 }

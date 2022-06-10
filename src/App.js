@@ -9,8 +9,8 @@ function App() {
   
   const [swampIsOpen, setSwampIsOpen] = useState(true);
   const [characters, setCharacters] = useState(['shrek', 'donkey', 'lord-farquaad', 'princess-fiona', 'pinocchio', 'gingerbread-man', 'fairy-godmother', 'puss-in-boots']);
-  const [shrekSize, setShrekSize] = useState(100);
-  const [knightSize, setKnightSize] = useState(100);
+  const [shrekSize, setShrekSize] = useState(160);
+  const [knightSize, setKnightSize] = useState(260);
   
   function handleShrekClick() {
     characters.push('shrek');
@@ -68,20 +68,20 @@ function App() {
           <div className='shrek'>
             <img src="../shrek2.png" width={shrekSize}/>
             <div className='button'>
-              <button onClick={() => setShrekSize(shrekSize + 10)}>GROW SHREK</button>
-              <button onClick={() => setShrekSize(shrekSize - 10)}>SHRINK SHREK</button>
+              <button onClick={() => setShrekSize(shrekSize + 10)}>EAT KNIGHT</button>
+              <button onClick={() => setShrekSize(shrekSize - 10)}>SPIT OUT THE KNIGHT</button>
             </div>
           </div>
           <div className='knight'>
             <img src="../knights.png" width={knightSize}/>
             <div className='button'>
-              <button onClick={() => setKnightSize(knightSize + 10)}>GROW KNIGHT</button>
-              <button onClick={() => setKnightSize(knightSize - 10)}>SHRINK KNIGHT</button>
+              <button onClick={() => setKnightSize(knightSize + 10)}>HIT SHREK</button>
+              <button onClick={() => setKnightSize(knightSize - 10)}>SACRIFICE A KNIGHT</button>
             </div>
           </div>
         </div>
         <CastleSwamp swampIsOpen={swampIsOpen} />
-        <button onClick={() => setSwampIsOpen(!swampIsOpen)}>TOGGLE</button>
+        <button className='swamp' onClick={() => setSwampIsOpen(!swampIsOpen)}>{swampIsOpen ? 'GO TO SWAMP' : 'GO TO FAR FAR AWAY'}</button>
       </header>
       <CharacterList characters={characters} />
       <button onClick={handleShrekClick}>Add Shrek</button>
