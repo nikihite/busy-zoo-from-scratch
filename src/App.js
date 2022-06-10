@@ -9,8 +9,8 @@ function App() {
   
   const [swampIsOpen, setSwampIsOpen] = useState(true);
   const [characters, setCharacters] = useState(['shrek', 'donkey', 'lord-farquaad', 'princess-fiona', 'pinocchio', 'gingerbread-man', 'fairy-godmother', 'puss-in-boots']);
-  const [shrekSize, setShrekSize] = useState([10]);
-  const [knightSize, setKnightSize] = useState(10);
+  const [shrekSize, setShrekSize] = useState(100);
+  const [knightSize, setKnightSize] = useState(100);
   
   function handleShrekClick() {
     characters.push('shrek');
@@ -59,6 +59,7 @@ function App() {
 
     setCharacters(characters.slice());
   }
+  console.log(shrekSize);
 
   return (
     <div className="App">
@@ -74,8 +75,8 @@ function App() {
           <div className='knight'>
             <img src="../knights.png" width={knightSize}/>
             <div className='button'>
-              <button onClick={() => setKnightSize(knightSize + 1)}>GROW KNIGHT</button>
-              <button onClick={() => setKnightSize(knightSize - 1)}>SHRINK KNIGHT</button>
+              <button onClick={() => setKnightSize(knightSize + 10)}>GROW KNIGHT</button>
+              <button onClick={() => setKnightSize(knightSize - 10)}>SHRINK KNIGHT</button>
             </div>
           </div>
         </div>
