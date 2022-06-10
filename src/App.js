@@ -59,7 +59,6 @@ function App() {
 
     setCharacters(characters.slice());
   }
-  console.log(shrekSize);
 
   function handleDeleteCharacter() {
     characters.pop();
