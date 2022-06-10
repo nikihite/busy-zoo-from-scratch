@@ -1,4 +1,4 @@
-import Character from "./Characters";
+import Character from './Characters';
 
 export default function CharacterList({ characters }) {
   return (
