@@ -89,7 +89,7 @@ function App() {
         <button className='swamp' onClick={() => setSwampIsOpen(!swampIsOpen)}>{swampIsOpen ? 'GO TO SWAMP' : 'GO TO FAR FAR AWAY'}</button>
       </header>
       <CharacterList characters={characters} />
-      <button onClick={handleShrekClick}>Add Shrek</button>
+      <button alt="Add Shrek" onClick={handleShrekClick}>Add Shrek</button>
       <button onClick={handleDonkeyClick}>Add Donkey</button>
       <button onClick={handleLordFarquaadClick}>Add Lord Farquaad</button>
       <button onClick={handlePrincessFionaClick}>Add Princess Fiona</button>
