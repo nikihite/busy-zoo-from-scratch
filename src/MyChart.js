@@ -12,7 +12,7 @@ const countMap = customers.reduce((acc, curr) => {
 }, {});
 
 const chartData = Object.keys(countMap).map(key => ({
-  city: key, count: countMap[key]
+  city: key, country: countMap[key]
 }));
 
 export default function MyCharts() {
