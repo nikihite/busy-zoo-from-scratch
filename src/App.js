@@ -3,6 +3,7 @@ import { useState } from 'react';
 import CastleSwamp from './CastleSwamp';
 import CharacterList from './CharacterList';
 import IconButton from './IconButton';
+import CustomButton from './CustomButton';
 
 
 
@@ -74,30 +75,30 @@ function App() {
           <div className='shrek'>
             <img src="../shrek2.png" width={shrekSize}/>
             <div className='button'>
-              <button onClick={() => setShrekSize(shrekSize + 10)}>EAT KNIGHT</button>
-              <button onClick={() => setShrekSize(shrekSize - 10)}>SPIT OUT THE KNIGHT</button>
+              <CustomButton onClick={() => setShrekSize(shrekSize + 10)}>EAT KNIGHT</CustomButton>
+              <CustomButton onClick={() => setShrekSize(shrekSize - 10)}>SPIT OUT THE KNIGHT</CustomButton>
             </div>
           </div>
           <div className='knight'>
             <img src="../knights.png" width={knightSize}/>
             <div className='button'>
-              <button onClick={() => setKnightSize(knightSize + 10)}>HIT SHREK</button>
-              <button onClick={() => setKnightSize(knightSize - 10)}>SACRIFICE A KNIGHT</button>
+              <CustomButton onClick={() => setKnightSize(knightSize + 10)}>HIT SHREK</CustomButton>
+              <CustomButton onClick={() => setKnightSize(knightSize - 10)}>SACRIFICE A KNIGHT</CustomButton>
             </div>
           </div>
         </div>
         <CastleSwamp swampIsOpen={swampIsOpen} />
-        <button className='swamp' onClick={() => setSwampIsOpen(!swampIsOpen)}>{swampIsOpen ? 'GO TO SWAMP' : 'GO TO FAR FAR AWAY'}</button>
+        <CustomButton className='swamp' onClick={() => setSwampIsOpen(!swampIsOpen)}>{swampIsOpen ? 'GO TO SWAMP' : 'GO TO FAR FAR AWAY'}</CustomButton>
       </header>
       <CharacterList characters={characters} />
-      <button alt="Add Shrek" onClick={handleShrekClick}>Add Shrek</button>
-      <button onClick={handleDonkeyClick}>Add Donkey</button>
-      <button onClick={handleLordFarquaadClick}>Add Lord Farquaad</button>
-      <button onClick={handlePrincessFionaClick}>Add Princess Fiona</button>
-      <button onClick={handlePinocchioClick}>Add Pinocchio</button>
-      <button onClick={handleGingerbreadManClick}>Add Gingerbread Man</button>
-      <button onClick={handleFairyGodmotherClick}>Add Fairy Godmother</button>
-      <button onClick={handlePussInBootsClick}>Add Puss In Boots</button>
+      <CustomButton alt="Add Shrek" onClick={handleShrekClick}>Add Shrek</CustomButton>
+      <CustomButton onClick={handleDonkeyClick}>Add Donkey</CustomButton>
+      <CustomButton onClick={handleLordFarquaadClick}>Add Lord Farquaad</CustomButton>
+      <CustomButton onClick={handlePrincessFionaClick}>Add Princess Fiona</CustomButton>
+      <CustomButton onClick={handleGingerbreadManClick}>Add Gingerbread Man</CustomButton>
+      <CustomButton onClick={handleFairyGodmotherClick}>Add Fairy Godmother</CustomButton>
+      <CustomButton onClick={handlePinocchioClick}>Add Pinocchio</CustomButton>
+      <CustomButton onClick={handlePussInBootsClick}>Add Puss In Boots</CustomButton>
       <IconButton onClick={handleDeleteCharacter} aria-label="delete">Delete Character</IconButton>
     </div>
   );
