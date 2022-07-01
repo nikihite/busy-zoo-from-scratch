@@ -17,9 +17,11 @@ const chartData = Object.keys(countMap).map(key => ({
 
 export default function MyCharts() {
   return (
-    <VictoryChart domainPadding={20}>
-      <VictoryBar data={chartData}
-        x="city" y="country" />
-    </VictoryChart>
+    <div className='chart-one'>
+      <VictoryChart domainPadding={20}>
+        <VictoryBar horizontal style={{ data: { fill: '#c43a31' } }} data={chartData}
+          x="city" y="country" />
+      </VictoryChart>
+    </div>
   );
 }
