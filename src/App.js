@@ -2,6 +2,7 @@ import './App.css';
 import { useState } from 'react';
 import CastleSwamp from './CastleSwamp';
 import CharacterList from './CharacterList';
+import IconButton from './IconButton';
 
 
 
@@ -97,7 +98,7 @@ function App() {
       <button onClick={handleGingerbreadManClick}>Add Gingerbread Man</button>
       <button onClick={handleFairyGodmotherClick}>Add Fairy Godmother</button>
       <button onClick={handlePussInBootsClick}>Add Puss In Boots</button>
-      <button onClick={handleDeleteCharacter}>Delete Character</button>
+      <IconButton onClick={handleDeleteCharacter} aria-label="delete">Delete Character</IconButton>
     </div>
   );
 }
