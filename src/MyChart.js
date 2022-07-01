@@ -1,27 +1,20 @@
-import { VictoryBar, VictoryChart } from 'victory';
-import { customers } from './data';
+import React from 'react';
+import { VictoryAxis, VictoryChart, VictoryLine } from 'victory';
 
-const countMap = customers.reduce((acc, curr) => {
-  if (acc[curr.city]) {
-    acc[curr.city]++;
-  } else {
-    acc[curr.city] = 1;
-  }
+const data = [
+  { quarter: 1, amount: 83 },
+  { quarter: 2, amount: 60 },
+  { quarter: 3, amount: 32 },
+  { quarter: 4, amount: 51 }
+];
 
-  return acc;
-}, {});
-
-const chartData = Object.keys(countMap).map(key => ({
-  city: key, country: countMap[key]
-}));
-
-export default function MyCharts() {
+export default function MyChart2() {
   return (
-    <div className='chart-one'>
-      <VictoryChart domainPadding={20}>
-        <VictoryBar horizontal style={{ data: { fill: '#c43a31' } }} data={chartData}
-          x="city" y="country" />
+    <div className='chart-two'>
+      <VictoryChart domainPadding={25}>
+        <VictoryAxis tickValues={[1, 2, 3, 4]} tickFormat={['Blue', 'Red', 'Pink', 'Orange']}/>
+        <VictoryAxis dependentAxis tickFormat={(x) => (`$${x / 100}`)} />
+        <VictoryLine data={data} x="quarter" y="amount"/>
       </VictoryChart>
     </div>
-  );
-}
+  );}

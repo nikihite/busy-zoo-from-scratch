@@ -68,5 +68,13 @@ button:hover {
 }
 
 .chart-one {
-  height: 500px;
+  height: 300px;
+}
+
+.chart-two {
+  height: 300px;
+}
+
+.chart-header {
+  text-align: center;
 }

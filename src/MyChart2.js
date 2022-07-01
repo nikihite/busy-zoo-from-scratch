@@ -17,5 +17,4 @@ export default function MyChart2() {
         <VictoryLine data={data} x="quarter" y="amount"/>
       </VictoryChart>
     </div>
-  );
-}
+  );}
