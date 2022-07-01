@@ -5,8 +5,8 @@ export default function CastleSwamp({ swampIsOpen }) {
     <div className={swampIsOpen ? 'open' : 'closed'}>
       {
         swampIsOpen
-          ? <img src='../Far_Far_Away.jpeg'/>
-          : <img src='../potty.jpeg'/>
+          ? <img alt="far-far-away" src='../Far_Far_Away.jpeg'/>
+          : <img alt="potty" src='../potty.jpeg'/>
       }
     </div>
   );

@@ -67,3 +67,14 @@ button:hover {
   background-color: #c287486f;
 }
 
+.chart-one {
+  height: 300px;
+}
+
+.chart-two {
+  height: 300px;
+}
+
+.chart-header {
+  text-align: center;
+}
